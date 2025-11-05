@@ -4,6 +4,7 @@ import { CircleHeart } from "../../utils/icons.jsx";
 import "./index.css";
 import Hero from "../../components/Hero/index.jsx";
 import Location from "../../components/Location/index.jsx";
+import Offer from "../../components/Offer/index.jsx";
 
 export default function Home() {
   return (
@@ -23,6 +24,7 @@ export default function Home() {
       </PromoBar>
       <Hero />
       <Location />
+      <Offer />
     </>
   );
 }

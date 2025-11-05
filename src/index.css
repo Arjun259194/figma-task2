@@ -1,5 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -40,7 +47,7 @@ code {
 
 :root {
   --rvr-brand: #306864;
-  --rvr-accent: #d08254;
+  --rvr-accent: hsl(22, 91%, 48%);
   --rvr-bg: #f7f7f5;
   --rvr-surface: #e9eae7;
   --rvr-border: #bcccc4;
@@ -101,6 +108,12 @@ body,
   background-color: var(--rvr-accent) !important;
   border-color: var(--rvr-accent) !important;
   color: #fff !important;
+}
+
+.outline-warning {
+  background-color: transparent;
+  border-color: var(--rvr-accent) !important;
+  color: var(--rvr-accent) !important;
 }
 
 .card,

@@ -1,5 +1,5 @@
 import { Globe, Heart } from "lucide-react";
-import { Container, Accordion, Card } from "react-bootstrap";
+import { Container, Accordion } from "react-bootstrap";
 import "./index.scss";
 import AccordionItem from "./AccordionItem";
 import { Wave } from "../../utils/wave.jsx";

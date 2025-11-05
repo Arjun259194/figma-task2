@@ -1,13 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+.pt-serif-regular {
+  font-family: "PT Serif", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.pt-serif-bold {
+  font-family: "PT Serif", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.pt-serif-regular-italic {
+  font-family: "PT Serif", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.pt-serif-bold-italic {
+  font-family: "PT Serif", serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+:root {
+  --rvr-brand: #306864;
+  --rvr-accent: #d08254;
+  --rvr-bg: #f7f7f5;
+  --rvr-surface: #e9eae7;
+  --rvr-border: #bcccc4;
+  --rvr-success: #87ad79;
+  --rvr-primary-txt: #273b37;
+  --rvr-secondary-txt: #3c635b;
+  --rvr-info: #a2d1ca;
+  --rvr-highlight: #6aa464;
+}
+
+body,
+.bg-light,
+.bg-white {
+  background-color: var(--rvr-bg) !important;
+  color: var(--rvr-primary-txt);
+}
+
+.text-primary,
+.navbar-brand,
+.navbar,
+.btn-link,
+.page-link {
+  color: var(--rvr-brand) !important;
+}
+
+.bg-primary,
+.btn-primary,
+.active > .page-link,
+.nav-pills .nav-link.active {
+  background-color: var(--rvr-brand) !important;
+  border-color: var(--rvr-brand) !important;
+  color: #fff !important;
+}
+
+.bg-secondary,
+.btn-secondary {
+  background-color: var(--rvr-secondary-txt) !important;
+  border-color: var(--rvr-secondary-txt) !important;
+  color: #fff !important;
+}
+
+.btn-success,
+.alert-success {
+  background-color: var(--rvr-success) !important;
+  border-color: var(--rvr-success) !important;
+  color: #fff !important;
+}
+
+.btn-info,
+.alert-info {
+  background-color: var(--rvr-info) !important;
+  border-color: var(--rvr-info) !important;
+  color: #273b37 !important;
+}
+
+.btn-warning,
+.alert-warning {
+  background-color: var(--rvr-accent) !important;
+  border-color: var(--rvr-accent) !important;
+  color: #fff !important;
+}
+
+.card,
+.modal-content {
+  background-color: var(--rvr-surface) !important;
+  border-color: var(--rvr-border) !important;
+  color: var(--rvr-primary-txt) !important;
+}
+
+.border,
+.table,
+.form-control,
+.input-group-text {
+  border-color: var(--rvr-border) !important;
+}
+
+.form-control,
+.form-select,
+.input-group-text {
+  background-color: var(--rvr-bg) !important;
+  color: var(--rvr-primary-txt) !important;
+}
+
+a,
+.link-primary,
+.dropdown-item.active,
+.dropdown-item:active {
+  color: var(--rvr-highlight) !important;
 }

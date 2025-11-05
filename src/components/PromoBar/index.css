@@ -1,0 +1,10 @@
+.promo-bar {
+  width: 100vw;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--rvr-accent);
+  color: white;
+  font-weight: bold;
+}

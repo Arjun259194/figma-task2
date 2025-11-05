@@ -1,4 +1,4 @@
-import { Globe, Tag } from "lucide-react";
+import { Globe, PhoneCall, Tag } from "lucide-react";
 import { Navbar, Nav, Button, Container } from "react-bootstrap";
 import "./index.css";
 import Logo from "../Logo.jsx";
@@ -36,38 +36,27 @@ export default function Header() {
             </Nav>
 
             <Nav>
-              <Button
-                variant="light"
-                className="riverly-btn btn-bons-plans me-2 px-3 py-2"
-              >
+              <button variant="light" className="btn-bons-plans me-2 px-3 py-2">
                 Bons plans <Tag className="me-1" size={14} />
-              </Button>
+              </button>
 
-              <Button
-                variant="success"
-                className="riverly-btn btn-devis me-2 px-3 py-2"
-              >
+              <Button className="riverly-btn btn-devis me-2 px-3 py-2">
                 Devis
               </Button>
 
-              <Button
-                variant="success"
-                className="riverly-btn btn-reservation me-3 px-3 py-2"
-              >
+              <Button className="riverly-btn btn-reservation me-3 px-3 py-2">
                 Réservation rapide
               </Button>
 
-              <Nav.Link
-                href="tel:+33357777777"
-                className="fw-bold"
-                style={{ color: "#333", fontSize: "1rem" }}
-              >
-                +33 35 77 77 77
+              <Nav.Link href="tel:+33357777777" className="fw-bold">
+                <Button variant="light">
+                  <PhoneCall className="me-1" size={14} />
+                  +33 35 77 77 77
+                </Button>
               </Nav.Link>
               <Nav.Link
                 href="#currency"
-                className="d-flex align-items-center"
-                style={{ color: "#333" }}
+                className="d-flex align-items-center text-white"
               >
                 <Globe className="me-1" size={14} /> FR - €
               </Nav.Link>

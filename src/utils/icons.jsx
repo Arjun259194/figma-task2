@@ -13,3 +13,57 @@ export const CircleHeart = () => (
     />
   </svg>
 );
+
+export const Lighthouse = (props) => (
+  <svg
+    width={20}
+    height={20}
+    viewBox="0 0 20 20"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    {...props}
+  >
+    <g clipPath="url(#clip0_207_917)">
+      <path
+        d="M6.25 4.375H13.75"
+        stroke="white"
+        strokeWidth={1.25}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M6.25008 4.37499L5.00008 16.8156C4.99178 16.9025 5.0018 16.9902 5.02947 17.0731C5.05714 17.1559 5.10186 17.232 5.16075 17.2965C5.21963 17.3609 5.29137 17.4124 5.37135 17.4474C5.45133 17.4825 5.53776 17.5004 5.62508 17.5H14.3751C14.4624 17.5004 14.5488 17.4825 14.6288 17.4474C14.7088 17.4124 14.7805 17.3609 14.8394 17.2965C14.8983 17.232 14.943 17.1559 14.9707 17.0731C14.9984 16.9902 15.0084 16.9025 15.0001 16.8156L13.7501 4.37499L10.4001 1.39452C10.2878 1.30098 10.1462 1.24976 10.0001 1.24976C9.85392 1.24976 9.71239 1.30098 9.60008 1.39452L6.25008 4.37499Z"
+        stroke="white"
+        strokeWidth={1.25}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M10 6.875V8.75"
+        stroke="white"
+        strokeWidth={1.25}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M16.25 6.875V8.75H3.75V6.875"
+        stroke="white"
+        strokeWidth={1.25}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M5.37305 13.125H14.6277"
+        stroke="white"
+        strokeWidth={1.25}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </g>
+    <defs>
+      <clipPath id="clip0_207_917">
+        <rect width={20} height={20} fill="white" />
+      </clipPath>
+    </defs>
+  </svg>
+);

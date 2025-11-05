@@ -3,6 +3,7 @@ import PromoBar from "../../components/PromoBar";
 import { CircleHeart } from "../../utils/icons.jsx";
 import "./index.css";
 import Hero from "../../components/Hero/index.jsx";
+import Location from "../../components/Location/index.jsx";
 
 export default function Home() {
   return (
@@ -21,6 +22,7 @@ export default function Home() {
         <MoveRight />
       </PromoBar>
       <Hero />
+      <Location />
     </>
   );
 }

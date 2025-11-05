@@ -13,14 +13,14 @@ export default function Hero() {
         <h1 className="pt-serif-regular">
           Vivez la croisière fluviale, autrement.
         </h1>
-        <div>
+        <div className="content">
           <p>
             Partez sans permis à la découverte des rivières et canaux de France
             et d'Europe. Naviguez à votre rythme, partagez des moments précieux
             en famille ou entre amis, reconnectez-vous à la nature et
             redécouvrez ce qui vous lie.
           </p>
-          <div>
+          <div className="review">
             <div>
               <span>Basé sur 2130 avis</span>
               <img src={stars} alt="" />

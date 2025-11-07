@@ -1,7 +1,9 @@
 import flag from "../../assets/flag.png";
 import img from "../../assets/cruise-img.png";
-import { Button } from "react-bootstrap";
+import { Button, Container } from "react-bootstrap";
 import "./index.scss";
+import useHorizontalScrollControl from "../../hooks/useHorizontalScollControl.jsx";
+import { ArrowLeft, ArrowRight } from "lucide-react";
 
 const tiles = [
   {
@@ -43,15 +45,26 @@ const tiles = [
 ];
 
 export default function CurrentFavorites() {
+  const { ref, scroll } = useHorizontalScrollControl({ scrollOffecet: 410 });
   return (
     <section className="current-favorites">
-      <CruiseTiles tiles={tiles} />
+      <button className="navigation" onClick={() => scroll("left")}>
+        <ArrowLeft />
+      </button>
+      <Container as="div" className="bar">
+        <h3> Coups de coeur du moment</h3>
+        <Button className="p-3">Demander un devis gratuit</Button>
+      </Container>
+      <CruiseTiles ref={ref} tiles={tiles} />
+      <button className="navigation" onClick={() => scroll("right")}>
+        <ArrowRight />
+      </button>
     </section>
   );
 }
 
-const CruiseTiles = ({ tiles }) => (
-  <div className="tiles">
+const CruiseTiles = ({ tiles, ref }) => (
+  <div ref={ref} className="tiles">
     {[...tiles, ...tiles].map((t) => {
       return <CruiseTile {...{ ...t, img }} />;
     })}
@@ -82,7 +95,10 @@ const CruiseTile = ({ img, region, title, details, price, cta }) => {
         <Button className="price" variant="light">
           {price}
         </Button>
-        <Button className="cta">{cta}</Button>
+        <Button className="cta">
+          {cta}
+          <ArrowRight size={16} />
+        </Button>
       </div>
     </div>
   );

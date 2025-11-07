@@ -46,7 +46,8 @@ code {
 }
 
 :root {
-  --rvr-brand: #306864;
+  /* --rvr-brand: #306864; */
+  --rvr-brand: #1d6c54;
   --rvr-accent: hsl(22, 91%, 48%);
   --rvr-bg: #f7f7f5;
   --rvr-surface: #e9eae7;

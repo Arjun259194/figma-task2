@@ -14,5 +14,3 @@ export default function ScrollCard({ img, alt = "offer", title, content }) {
     </div>
   );
 }
-
-// J’en profite

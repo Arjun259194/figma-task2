@@ -1,0 +1,58 @@
+.stay-in-france-section {
+  position: relative;
+  text-align: center;
+
+  h3 {
+    font-size: 3rem;
+  }
+
+  .wave {
+    width: 100%;
+    position: absolute;
+    inset: 0;
+    z-index: 5;
+  }
+
+  a.action {
+    // color: var(--rvr-border);
+    color: gray !important;
+    text-underline-offset: 0.5rem;
+  }
+
+  .tiles {
+    z-index: 10;
+    display: grid;
+    position: relative;
+    padding: 2rem 0;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+
+    .tile {
+      text-align: start;
+      display: flex;
+      opacity: 1;
+      background-color: var(--rvr-bg);
+      border-radius: 1rem;
+
+      img {
+        width: 50%;
+      }
+
+      div {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+
+        p:first-child {
+          font-size: 1.5rem;
+        }
+
+        a {
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+}

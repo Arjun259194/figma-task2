@@ -1,0 +1,22 @@
+.current-favorites {
+  padding: 3rem 0;
+  .tiles {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    overflow-y: auto;
+    scrollbar-width: none;
+    gap: 2rem;
+
+    .tile {
+      min-width: 410px;
+      max-height: 542px;
+
+      img.banner {
+        width: 100%;
+        aspect-ratio: 1/0.5;
+        object-fit: cover;
+      }
+    }
+  }
+}

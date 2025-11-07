@@ -5,6 +5,11 @@ import "./index.css";
 import Hero from "../../components/Hero/index.jsx";
 import Location from "../../components/Location/index.jsx";
 import Offer from "../../components/Offer/index.jsx";
+import MapGrid from "../../components/MapGrid/index.jsx";
+import RiverCards from "../../components/RiverCards/index.jsx";
+import BindText from "../../components/BindText/index.jsx";
+import StayInFrance from "../../components/StayInFrance/index.jsx";
+import CurrentFavorites from "../../components/CurrentFavorites/index.jsx";
 
 export default function Home() {
   return (
@@ -25,6 +30,11 @@ export default function Home() {
       <Hero />
       <Location />
       <Offer />
+      <MapGrid />
+      <RiverCards />
+      <BindText />
+      <StayInFrance />
+      <CurrentFavorites />
     </>
   );
 }

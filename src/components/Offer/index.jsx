@@ -1,4 +1,3 @@
-import React from "react";
 import { Button, Container } from "react-bootstrap";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import card1 from "../../assets/card-1.png";
@@ -6,6 +5,7 @@ import card2 from "../../assets/card-2.png";
 import card3 from "../../assets/card-3.png";
 import ScrollCard from "./ScrollCard.jsx";
 import "./index.scss";
+import useHorizontalScrollControl from "../../hooks/useHorizontalScollControl.jsx";
 
 const cards = [
   {
@@ -29,22 +29,7 @@ const cards = [
 ];
 
 export default function Offer() {
-  const scrollContainerRef = React.useRef(null);
-
-  const handleScroll = (direction) => {
-    if (scrollContainerRef.current) {
-      const scrollAmount = 500;
-      const newScrollPosition =
-        scrollContainerRef.current.scrollLeft +
-        (direction === "left" ? -scrollAmount : scrollAmount);
-
-      scrollContainerRef.current.scrollTo({
-        left: newScrollPosition,
-        behavior: "smooth",
-      });
-    }
-  };
-
+  const { ref, scroll } = useHorizontalScrollControl({ scrollOffecet: 500 });
   return (
     <section>
       <Container className="title">
@@ -55,10 +40,10 @@ export default function Offer() {
         <ArrowLeft
           size={32}
           className="cursor-pointer"
-          onClick={() => handleScroll("left")}
+          onClick={() => scroll("left")}
           style={{ cursor: "pointer" }}
         />
-        <div ref={scrollContainerRef}>
+        <div ref={ref}>
           {cards.map((card, index) => (
             <ScrollCard key={index} {...card} />
           ))}
@@ -66,7 +51,7 @@ export default function Offer() {
         <ArrowRight
           size={32}
           className="cursor-pointer"
-          onClick={() => handleScroll("right")}
+          onClick={() => scroll("right")}
           style={{ cursor: "pointer" }}
         />
       </Container>

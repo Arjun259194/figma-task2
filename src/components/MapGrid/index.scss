@@ -1,0 +1,71 @@
+.map-grid {
+  padding: 2rem;
+  .title {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    a {
+      text-underline-offset: 0.5rem;
+    }
+  }
+
+  .content {
+    padding: 1rem;
+    .frames {
+      display: grid;
+      gap: 1rem;
+      align-items: start;
+      grid-template-columns: repeat(5, 1fr);
+      height: 600px; /* Set this to your preferred fixed height */
+      position: relative; /* Optional, for better control */
+
+      .left {
+        display: flex;
+        flex-direction: column;
+        grid-column: 1 / span 3;
+        height: 100%; /* Match the height of the grid container */
+        overflow-y: auto; /* Enable vertical scrolling */
+        scrollbar-width: none;
+        position: relative;
+
+        .frame {
+          margin-bottom: 2rem;
+          span {
+            margin: 0.5rem 0.5rem;
+          }
+          .boxs {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+
+            .box {
+              position: relative;
+
+              img {
+                width: 100%;
+                z-index: 5;
+              }
+
+              span {
+                z-index: 10;
+                position: absolute;
+                bottom: 5%;
+                left: 50%;
+                transform: translateX(-50%);
+                color: white;
+                font-weight: bold;
+              }
+            }
+          }
+        }
+      }
+      img.right {
+        grid-column: span 2;
+        width: 100%;
+        height: 100%; /* Fill the parent height */
+        object-fit: cover; /* Ensure aspect ratio is maintained */
+        border-radius: 1rem;
+      }
+    }
+  }
+}

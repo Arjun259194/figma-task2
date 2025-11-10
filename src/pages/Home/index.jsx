@@ -12,6 +12,7 @@ import StayInFrance from "../../components/StayInFrance/index.jsx";
 import CurrentFavorites from "../../components/CurrentFavorites/index.jsx";
 import Review from "../../components/Review/index.jsx";
 import Discover from "../../components/Discover/index.jsx";
+import Blog from "../../components/Blog/index.jsx";
 
 export default function Home() {
   return (
@@ -39,6 +40,7 @@ export default function Home() {
       <CurrentFavorites />
       <Review />
       <Discover />
+      <Blog />
     </>
   );
 }

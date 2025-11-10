@@ -1,6 +1,6 @@
 import { Globe, PhoneCall, Tag } from "lucide-react";
 import { Navbar, Nav, Button, Container } from "react-bootstrap";
-import "./index.css";
+import "./index.scss";
 import Logo from "../Logo.jsx";
 
 export default function Header() {
@@ -44,7 +44,7 @@ export default function Header() {
                 Devis
               </Button>
 
-              <Button className="riverly-btn btn-reservation me-3 px-3 py-2">
+              <Button className="riverly-btn btn-reservation me-3 ">
                 Réservation rapide
               </Button>
 

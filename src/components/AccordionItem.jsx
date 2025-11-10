@@ -5,7 +5,7 @@ export default function AccordionItem({ eventKey, title, icon, children }) {
     <Accordion.Item eventKey={eventKey} className="accordion-item">
       <Accordion.Header className="accordion-header">
         <div className="d-flex align-items-center gap-2">
-          {icon}
+          {!!icon ? icon : null}
           <span>{title}</span>
         </div>
       </Accordion.Header>

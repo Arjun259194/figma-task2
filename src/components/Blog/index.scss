@@ -33,7 +33,6 @@
     .blog {
       display: flex;
       flex-direction: column;
-      //   align-items: center;
 
       & > :not(img) {
         padding-inline: 1.5rem;

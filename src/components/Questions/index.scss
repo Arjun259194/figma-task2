@@ -1,0 +1,121 @@
+// --- Variables ---
+$primary-text-color: #274044;
+$accordion-closed-bg: #fff;
+$accordion-open-header-bg: #d3f7de;
+$accordion-open-body-bg: #d3f7de;
+$accordion-border-color: #e0e0e0;
+$accordion-radius: 1rem;
+
+.question-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 4rem 0;
+
+  h3 {
+    font-size: 3rem;
+    color: $primary-text-color;
+    margin-bottom: 3rem;
+  }
+
+  .questions {
+    width: 65vw;
+    max-width: 900px;
+    border-radius: $accordion-radius;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+
+    .accordion-item {
+      border: none;
+      margin-bottom: 0;
+      background-color: $accordion-closed-bg;
+
+      &:not(:last-child) {
+        border-bottom: 1px solid $accordion-border-color;
+      }
+      &:first-of-type {
+        border-top-left-radius: $accordion-radius;
+        border-top-right-radius: $accordion-radius;
+      }
+      &:last-of-type {
+        border-bottom-left-radius: $accordion-radius;
+        border-bottom-right-radius: $accordion-radius;
+      }
+
+      .accordion-header {
+        border-bottom: none;
+
+        .accordion-button {
+          color: $primary-text-color;
+          background-color: $accordion-closed-bg;
+          padding: 1.5rem 2rem;
+          font-weight: 600;
+          font-size: 1.25rem;
+          border-radius: 0 !important;
+          box-shadow: none !important;
+
+          &::after {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23274044'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+            transform: translateY(-50%);
+            width: 1.25rem;
+            height: 1.25rem;
+          }
+
+          &:focus {
+            box-shadow: none;
+          }
+
+          &[aria-expanded="true"] {
+            color: $primary-text-color;
+            background-color: $accordion-open-header-bg;
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+
+            &::after {
+              transform: rotate(-180deg);
+            }
+          }
+        }
+        span {
+          font-size: 1.25rem;
+        }
+      }
+
+      .accordion-collapse.show {
+        .accordion-body {
+          background-color: $accordion-open-body-bg;
+          color: $primary-text-color;
+          padding: 1.5rem 2rem;
+          font-size: 1rem;
+          line-height: 1.6;
+          font-weight: 400;
+
+          border-top-left-radius: 0;
+          border-top-right-radius: 0;
+
+          .accordion-item:last-of-type & {
+            border-bottom-left-radius: $accordion-radius;
+            border-bottom-right-radius: $accordion-radius;
+          }
+        }
+      }
+    }
+  }
+
+  .discover-faq-link {
+    margin-top: 2rem;
+    color: $primary-text-color;
+    text-decoration: none;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.1rem;
+
+    &:hover {
+      color: lighten($primary-text-color, 15%);
+      text-decoration: underline;
+    }
+  }
+}

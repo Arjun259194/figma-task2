@@ -2,9 +2,12 @@
 $primary-text-color: #274044;
 $accordion-closed-bg: #fff;
 $accordion-open-header-bg: #d3f7de;
-$accordion-open-body-bg: #d3f7de;
+$accordion-open-body-bg: #e4f7e5;
 $accordion-border-color: #e0e0e0;
 $accordion-radius: 1rem;
+
+$question-font-size: 1.6rem;
+$body-font-size: 1.5rem;
 
 .question-section {
   display: flex;
@@ -51,7 +54,7 @@ $accordion-radius: 1rem;
           background-color: $accordion-closed-bg;
           padding: 1.5rem 2rem;
           font-weight: 600;
-          font-size: 1.25rem;
+          font-size: $question-font-size;
           border-radius: 0 !important;
           box-shadow: none !important;
 
@@ -78,7 +81,7 @@ $accordion-radius: 1rem;
           }
         }
         span {
-          font-size: 1.25rem;
+          font-size: $question-font-size;
         }
       }
 
@@ -87,7 +90,7 @@ $accordion-radius: 1rem;
           background-color: $accordion-open-body-bg;
           color: $primary-text-color;
           padding: 1.5rem 2rem;
-          font-size: 1rem;
+          font-size: $body-font-size;
           line-height: 1.6;
           font-weight: 400;
 

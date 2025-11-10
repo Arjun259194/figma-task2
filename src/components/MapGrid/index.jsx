@@ -29,6 +29,7 @@ export default function MapGrid() {
       </Container>
       <Container className="content" as="div">
         <div className="frames">
+          <div className="fade-box"></div>
           <div data-lenis-prevent className="left">
             <Frame />
             <Frame />

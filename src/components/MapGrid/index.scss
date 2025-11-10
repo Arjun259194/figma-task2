@@ -16,6 +16,24 @@
       align-items: start;
       grid-template-columns: repeat(5, 1fr);
       position: relative; /* Optional, for better control */
+      z-index: 2;
+      margin: 2rem 0;
+
+      .fade-box {
+        pointer-events: none;
+        inset: 0;
+        right: calc(100% / 5 * 2);
+        background: #2a7b9b;
+        background: linear-gradient(
+          180deg,
+          rgba(42, 123, 155, 0) 0%,
+          rgba(87, 199, 133, 0) 50%,
+          rgba(255, 255, 255, 1) 95%
+        );
+        display: block;
+        position: absolute;
+        z-index: 20;
+      }
 
       .left {
         display: flex;
@@ -31,6 +49,10 @@
           margin-bottom: 2rem;
           span.link {
             margin: 1rem;
+          }
+
+          &:last-child {
+            margin-bottom: 8rem;
           }
           .boxs {
             display: grid;

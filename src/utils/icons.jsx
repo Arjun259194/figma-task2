@@ -14,6 +14,53 @@ export const CircleHeart = () => (
   </svg>
 );
 
+export const BorderStar = (props) => (
+  <svg
+    width={24}
+    height={24}
+    viewBox="0 0 24 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    {...props}
+  >
+    <mask
+      id="mask0_656_359"
+      style={{
+        maskType: "alpha",
+      }}
+      maskUnits="userSpaceOnUse"
+      x={0}
+      y={0}
+      width={24}
+      height={24}
+    >
+      <rect width={24} height={24} fill="#D9D9D9" />
+    </mask>
+    <g mask="url(#mask0_656_359)">
+      <path
+        d="M16.7 14.5L20.5 11.25L23.5 11.5L19.1 15.325L20.4 21L17.85 19.45L16.7 14.5ZM14.35 7.2L13.3 4.75L14.45 2L16.75 7.425L14.35 7.2ZM7.35 16.825L10.5 14.925L13.65 16.85L12.825 13.25L15.6 10.85L11.95 10.525L10.5 7.125L9.05 10.5L5.4 10.825L8.175 13.25L7.35 16.825ZM4.325 21L5.95 13.975L0.5 9.25L7.7 8.625L10.5 2L13.3 8.625L20.5 9.25L15.05 13.975L16.675 21L10.5 17.275L4.325 21Z"
+        fill="#1D6C54"
+      />
+    </g>
+  </svg>
+);
+
+export const Star = (props) => (
+  <svg
+    width={14}
+    height={13}
+    viewBox="0 0 14 13"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    {...props}
+  >
+    <path
+      d="M14 4.96845H8.654L7.00271 0L5.34558 4.96887L0 4.96347L4.3295 8.03695L2.67321 13L7.00271 9.93151L11.3272 13L9.67592 8.03695L14 4.96845Z"
+      fill="#04DA8D"
+    />
+  </svg>
+);
+
 export const Lighthouse = (props) => (
   <svg
     width={20}

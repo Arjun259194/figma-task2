@@ -1,19 +1,22 @@
 import { createBrowserRouter } from "react-router";
 import { RouterProvider } from "react-router/dom";
 import Home from "./pages/Home";
-
+import { ReactLenis } from "lenis/react";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Home />
+    element: <Home />,
   },
 ]);
 
 function App() {
   return (
-    <RouterProvider router={router} />
-  )
+    <>
+      <ReactLenis root />
+      <RouterProvider router={router} />;
+    </>
+  );
 }
 
 export default App;

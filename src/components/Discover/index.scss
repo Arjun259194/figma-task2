@@ -1,0 +1,151 @@
+$bg: #194556;
+
+.discover-section {
+  padding: 3rem 0;
+  background-color: $bg;
+  color: white;
+  position: relative;
+
+  h3 {
+    text-align: center;
+    font-size: 3rem;
+    margin: 2rem 0;
+  }
+
+  button.navigation {
+    position: absolute;
+    border: none;
+    padding: 0.8rem;
+    z-index: 10;
+    color: var(--rvr-brand);
+
+    &:first-child {
+      top: 50%;
+      left: 0;
+      border-top-right-radius: 1.25rem;
+      border-bottom-right-radius: 1.25rem;
+      border-left: none;
+    }
+
+    &:last-child {
+      top: 50%;
+      right: 0;
+      border-top-left-radius: 1.25rem;
+      border-bottom-left-radius: 1.25rem;
+      border-right: none;
+    }
+  }
+
+  .filter-and-action {
+    padding: 1rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .tags {
+      .tag {
+        margin-right: 1rem;
+        padding: 0.5rem 1rem;
+        border: 1px solid white;
+        color: white;
+        border-radius: 2rem;
+        background-color: transparent;
+
+        &[data-active] {
+          background-color: white;
+          color: $bg;
+        }
+      }
+    }
+
+    .filters {
+      .filter {
+        margin-right: 1rem;
+        padding: 0.5rem 1rem;
+        border: 1px solid white;
+        color: $bg;
+        border-radius: 2rem;
+        background-color: white;
+      }
+    }
+
+    a {
+      color: white !important;
+      text-underline-offset: 0.8rem;
+    }
+  }
+
+  .tiles {
+    max-width: 100%;
+    display: flex;
+    overflow-x: auto;
+    scrollbar-width: none;
+    margin: 2rem 0;
+    gap: 2rem;
+
+    .tile {
+      background-color: white;
+      color: $bg;
+      border-radius: 1rem;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+
+      &:first-child {
+        margin-left: 6rem;
+      }
+
+      &:last-child {
+        margin-right: 6rem;
+      }
+
+      .bottom {
+        margin-top: auto;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        justify-content: space-between;
+
+        h4 {
+          font-size: 2rem;
+        }
+
+        .features {
+          width: 100%;
+          border-bottom: 1px solid var(--rvr-border);
+          margin: 1rem 0;
+          span {
+            margin-right: 1rem;
+            font-size: 1.2rem;
+            font-weight: bold;
+          }
+        }
+
+        button {
+          font-size: 1.5rem;
+          padding: 1rem 0;
+          background-color: $bg !important;
+          color: white;
+          &.price {
+            background-color: white !important;
+            color: $bg;
+          }
+        }
+      }
+
+      .type {
+        $blur: 2px;
+        padding: 0.25rem 0.5rem;
+        position: absolute;
+        top: 5%;
+        left: 5%;
+        color: white;
+        background-color: rgba(255, 255, 255, 0.2); /* White with 20% opacity */
+        backdrop-filter: blur($blur);
+        -webkit-backdrop-filter: blur($blur);
+        border-radius: 0.5rem;
+      }
+    }
+  }
+}

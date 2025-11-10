@@ -10,6 +10,8 @@ import RiverCards from "../../components/RiverCards/index.jsx";
 import BindText from "../../components/BindText/index.jsx";
 import StayInFrance from "../../components/StayInFrance/index.jsx";
 import CurrentFavorites from "../../components/CurrentFavorites/index.jsx";
+import Review from "../../components/Review/index.jsx";
+import Discover from "../../components/Discover/index.jsx";
 
 export default function Home() {
   return (
@@ -35,6 +37,8 @@ export default function Home() {
       <BindText />
       <StayInFrance />
       <CurrentFavorites />
+      <Review />
+      <Discover />
     </>
   );
 }

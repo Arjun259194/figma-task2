@@ -1,0 +1,132 @@
+.reviews-section {
+  padding: 2rem 0 5rem 0;
+  margin-bottom: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--rvr-surface);
+  border-radius: 1rem;
+  position: relative;
+
+  button.navigation {
+    position: absolute;
+    border: none;
+    padding: 0.8rem;
+    z-index: 10;
+    color: var(--rvr-brand);
+
+    &:first-child {
+      top: 50%;
+      left: 0;
+      border-top-right-radius: 1.25rem;
+      border-bottom-right-radius: 1.25rem;
+      border-left: none;
+    }
+
+    &:last-child {
+      top: 50%;
+      right: 0;
+      border-top-left-radius: 1.25rem;
+      border-bottom-left-radius: 1.25rem;
+      border-right: none;
+    }
+  }
+
+  h3 {
+    font-size: 3rem;
+  }
+
+  .ratings {
+    display: flex;
+    align-items: center;
+    margin: 1.8rem 0;
+    padding: 0.25rem 1rem;
+    -webkit-box-shadow: 0px 0px 34px 2px rgba(66, 68, 90, 0.32);
+    -moz-box-shadow: 0px 0px 34px 2px rgba(66, 68, 90, 0.32);
+    box-shadow: 0px 0px 34px 2px rgba(66, 68, 90, 0.32);
+    border-radius: 0.5rem;
+    background-color: white;
+
+    gap: 1rem;
+    p {
+      margin: 0;
+      padding: 0;
+    }
+
+    .nums {
+      font-size: 3rem;
+      font-weight: bold;
+      color: var(--rvr-brand);
+    }
+  }
+
+  .tiles {
+    max-width: 100%;
+    display: flex;
+    padding: 2rem;
+    overflow-x: scroll;
+    scrollbar-width: none;
+    gap: 2rem;
+
+    .tile {
+      min-width: 280px;
+      background-color: var(--rvr-bg);
+      border-radius: 1rem;
+      padding: 1rem;
+
+      &:first-child {
+        margin-left: 3rem;
+      }
+
+      &:last-child {
+        margin-right: 3rem;
+      }
+
+      .top {
+        p,
+        h3 {
+          margin-bottom: 1rem;
+        }
+
+        p {
+          margin-bottom: 1.5rem;
+          line-height: 2rem;
+
+          &:last-child {
+            color: var(--rvr-brand);
+            font-weight: bold;
+          }
+        }
+      }
+    }
+
+    .bottom {
+      background-color: var(--rvr-surface);
+      padding: 0.5rem 0.25rem;
+      border-radius: 0.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      div {
+        display: flex;
+        align-items: center;
+        img {
+          border-radius: 50%;
+          aspect-ratio: 1/1;
+          width: 32px;
+          margin-inline: 0.5rem;
+        }
+      }
+
+      span.rate {
+        display: flex;
+        border-radius: 0.5rem;
+        font-size: 1.25rem;
+        align-items: center;
+        padding: 0.25rem;
+        background-color: white;
+        color: var(--rvr-brand);
+      }
+    }
+  }
+}

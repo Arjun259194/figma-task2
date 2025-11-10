@@ -1,5 +1,4 @@
 .map-grid {
-  padding: 2rem;
   .title {
     display: flex;
     flex-direction: column;
@@ -10,33 +9,34 @@
   }
 
   .content {
-    padding: 1rem;
     .frames {
       display: grid;
+      margin-top: 1rem;
       gap: 1rem;
       align-items: start;
       grid-template-columns: repeat(5, 1fr);
-      height: 600px; /* Set this to your preferred fixed height */
       position: relative; /* Optional, for better control */
 
       .left {
         display: flex;
         flex-direction: column;
         grid-column: 1 / span 3;
-        height: 100%; /* Match the height of the grid container */
+        max-height: 80vh; /* Set this to your preferred fixed height */
+        min-height: 100%;
         overflow-y: auto; /* Enable vertical scrolling */
         scrollbar-width: none;
         position: relative;
 
         .frame {
           margin-bottom: 2rem;
-          span {
-            margin: 0.5rem 0.5rem;
+          span.link {
+            margin: 1rem;
           }
           .boxs {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 1rem;
+            padding: 1rem;
 
             .box {
               position: relative;

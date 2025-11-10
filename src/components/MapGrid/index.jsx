@@ -29,7 +29,7 @@ export default function MapGrid() {
       </Container>
       <Container className="content" as="div">
         <div className="frames">
-          <div className="left">
+          <div data-lenis-prevent className="left">
             <Frame />
             <Frame />
             <Frame />
@@ -45,7 +45,7 @@ export default function MapGrid() {
 const Frame = () => {
   return (
     <div className="frame">
-      <span>
+      <span className="link">
         Croisière fluviale en France <ArrowRight size={14} />
       </span>
       <div className="boxs">

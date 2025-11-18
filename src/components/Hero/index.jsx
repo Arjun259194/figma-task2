@@ -4,6 +4,7 @@ import stars from "../../assets/review-stars.png";
 import { ArrowRight } from "lucide-react";
 import "./index.scss";
 import { Container } from "react-bootstrap";
+import SearchFormComponent from "./Search.jsx";
 
 export default function Hero() {
   return (
@@ -32,6 +33,7 @@ export default function Hero() {
           </a>
         </div>
       </Container>
+      <SearchFormComponent />
     </div>
   );
 }

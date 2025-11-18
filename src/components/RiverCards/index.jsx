@@ -49,15 +49,17 @@ export default function RiverCards() {
           <ArrowLeft />
         </button>
         <div className="tags container">
-          <span data-active className="tag">
-            France
-          </span>
-          <span className="tag"> Allemagne</span>
-          <span className="tag"> Pays-Bas </span>
-          <span className="tag"> Italie </span>
-          <span className="tag"> Irlande </span>
-          <span className="tag"> Portugal </span>
-          <span className="tag"> Hongrie </span>
+          <div className="wrapper">
+            <span data-active className="tag">
+              France
+            </span>
+            <span className="tag"> Allemagne</span>
+            <span className="tag"> Pays-Bas </span>
+            <span className="tag"> Italie </span>
+            <span className="tag"> Irlande </span>
+            <span className="tag"> Portugal </span>
+            <span className="tag"> Hongrie </span>
+          </div>
           <a href="/">
             Toutes nos croisières fluviales <ArrowRight />
           </a>

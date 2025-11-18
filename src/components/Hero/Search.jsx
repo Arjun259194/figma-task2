@@ -115,7 +115,7 @@ function SearchFormComponent() {
 
   return (
     <div className="search">
-      <Container>
+      <div>
         <Tab.Container activeKey={activeTab} onSelect={(k) => setActiveTab(k)}>
           <SearchTabNav activeTab={activeTab} setActiveTab={setActiveTab} />
           <div
@@ -140,7 +140,7 @@ function SearchFormComponent() {
             </Tab.Content>
           </div>
         </Tab.Container>
-      </Container>
+      </div>
     </div>
   );
 }

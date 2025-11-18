@@ -18,19 +18,6 @@ import Questions from "../../components/Questions/index.jsx";
 export default function Home() {
   return (
     <>
-      <PromoBar>
-        <CircleHeart />
-        <span
-          style={{
-            color: "var(--rvr-surface)",
-            marginInline: "0.25rem",
-          }}
-        >
-          Coup de coeur
-        </span>{" "}
-        La route des Vins de Bourgogne
-        <MoveRight />
-      </PromoBar>
       <Hero />
       <Location />
       <Offer />

@@ -39,7 +39,7 @@ export default function Offer() {
       <Container className="offer">
         <ArrowLeft
           size={32}
-          className="cursor-pointer"
+          className="cursor-pointer navigation"
           onClick={() => scroll("left")}
           style={{ cursor: "pointer" }}
         />
@@ -50,7 +50,7 @@ export default function Offer() {
         </div>
         <ArrowRight
           size={32}
-          className="cursor-pointer"
+          className="cursor-pointer navigation"
           onClick={() => scroll("right")}
           style={{ cursor: "pointer" }}
         />

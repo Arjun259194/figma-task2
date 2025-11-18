@@ -1,4 +1,18 @@
+@import "../../index.scss";
+
 header {
+  @include mobile {
+    padding: 1rem 0.5rem 0 0.5rem;
+    background-color: var(--rvr-surface);
+
+    .promo-bar {
+      border-radius: 1rem;
+    }
+    .logo {
+      max-width: calc(100vw / 3);
+    }
+  }
+
   .navbar-brand.riverly-brand {
     color: #2c5a51 !important;
     font-weight: bold;

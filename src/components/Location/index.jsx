@@ -3,12 +3,10 @@ import { Container, Accordion } from "react-bootstrap";
 import "./index.scss";
 import AccordionItem from "../AccordionItem";
 import { Wave } from "../../utils/wave.jsx";
-import SearchFormComponent from "./Search.jsx";
 
 export default function Location() {
   return (
     <section className="location-section">
-      <SearchFormComponent />
       <Wave className="wave" />
       <Container className="con" as="div">
         <div className="left">

@@ -1,17 +1,32 @@
-import { Globe, PhoneCall, Tag } from "lucide-react";
+import { Globe, MoveRight, PhoneCall, Tag } from "lucide-react";
 import { Navbar, Nav, Button, Container } from "react-bootstrap";
 import "./index.scss";
 import Logo from "../Logo.jsx";
+import PromoBar from "../PromoBar/index.jsx";
+import { CircleHeart } from "../../utils/icons.jsx";
 
 export default function Header() {
   return (
     <header>
+      <PromoBar>
+        <CircleHeart />
+        <span
+          style={{
+            color: "var(--rvr-surface)",
+            marginInline: "0.25rem",
+          }}
+        >
+          Coup de coeur
+        </span>{" "}
+        La route des Vins de Bourgogne
+        <MoveRight />
+      </PromoBar>
       <Navbar expand="lg">
         <Container>
           {/* Logo/Brand */}
           {/* Using custom class and standard Bootstrap classes */}
           <Navbar.Brand href="#home" className="riverly-brand fw-bold">
-            <Logo />
+            <Logo className="logo" />
           </Navbar.Brand>
 
           {/* Toggler for mobile view */}

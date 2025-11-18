@@ -32,9 +32,6 @@ export default function MapGrid() {
           <div className="fade-box"></div>
           <div data-lenis-prevent className="left">
             <Frame />
-            <Frame />
-            <Frame />
-            <Frame />
           </div>
           <img className="right" src={map} alt="location-map" />
         </div>
@@ -50,7 +47,7 @@ const Frame = () => {
         Croisière fluviale en France <ArrowRight size={14} />
       </span>
       <div className="boxs">
-        {grid.map((g, i) => {
+        {[...grid, ...grid, ...grid, ...grid].map((g, i) => {
           return <Box key={i} {...g} />;
         })}
       </div>

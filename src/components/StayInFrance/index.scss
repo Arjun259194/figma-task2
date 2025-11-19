@@ -1,3 +1,5 @@
+@import "../../index.scss";
+
 .stay-in-france-section {
   position: relative;
   text-align: center;
@@ -14,7 +16,6 @@
   }
 
   a.action {
-    // color: var(--rvr-border);
     color: gray !important;
     text-underline-offset: 0.5rem;
   }
@@ -27,15 +28,25 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
 
+    @include mobile {
+      display: flex;
+      flex-direction: column;
+      grid-template-columns: unset;
+      padding-inline: 1rem;
+    }
+
     .tile {
       text-align: start;
       display: flex;
       opacity: 1;
       background-color: var(--rvr-bg);
       border-radius: 1rem;
+      width: 100%;
+      background-color: transparent;
+      border: 1px solid var(--rvr-border);
 
       img {
-        width: 50%;
+        width: 100%;
       }
 
       div {

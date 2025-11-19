@@ -1,7 +1,7 @@
 import { Globe, Heart } from "lucide-react";
 import { Container, Accordion } from "react-bootstrap";
 import "./index.scss";
-import AccordionItem from "../AccordionItem";
+import AccordionItem from "../AccordionItem.jsx";
 import { Wave } from "../../utils/wave.jsx";
 
 export default function Location() {

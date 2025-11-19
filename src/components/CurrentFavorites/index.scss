@@ -1,3 +1,5 @@
+@import "../../index.scss";
+
 .current-favorites {
   padding: 3rem 0;
   position: relative;
@@ -7,6 +9,11 @@
     align-items: center;
     justify-content: space-between;
     margin-bottom: 2rem;
+
+    @include mobile {
+      flex-direction: column;
+      gap: 1rem;
+    }
 
     h3 {
       font-size: 2rem;

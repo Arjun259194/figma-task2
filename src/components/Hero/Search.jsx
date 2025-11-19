@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Tab, Nav, Form, Row, Col, Button, Container } from "react-bootstrap";
+import { Tab, Nav, Form, Row, Col, Button } from "react-bootstrap";
 import { Lighthouse } from "../../utils/icons.jsx";
 
 function SearchTabNav({ activeTab }) {

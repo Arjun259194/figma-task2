@@ -1,8 +1,13 @@
+@import "../../index.scss";
+
 .bind-text-section {
   padding: 3rem 0;
 
   h3 {
     font-size: 2.5rem;
+    @include mobile {
+      text-align: center;
+    }
   }
 
   .split {
@@ -11,12 +16,20 @@
     width: 100%;
     gap: 2rem;
 
+    @include mobile {
+      flex-direction: column;
+    }
+
     .text {
       width: 50%;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       align-items: start;
+
+      @include mobile {
+        width: 100%;
+      }
 
       p {
         margin: 0;
@@ -39,6 +52,9 @@
 
     img {
       width: 50%;
+      @include mobile {
+        width: 100%;
+      }
     }
   }
 }

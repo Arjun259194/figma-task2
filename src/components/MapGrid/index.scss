@@ -69,6 +69,9 @@
 
           &:last-child {
             margin-bottom: 8rem;
+            @include mobile {
+              margin: unset;
+            }
           }
 
           .boxs {
@@ -78,32 +81,29 @@
             padding: 1rem;
 
             @include mobile {
+              // REMOVE the fixed 3-column grid
+              grid-template-columns: unset;
+
+              // horizontal scroll settings
               grid-auto-flow: column;
-              /* place items left-to-right in one row */
               grid-auto-columns: minmax(80%, 80%);
-              /* each card gets ~80% of viewport width */
               gap: 1rem;
               overflow-x: auto;
               -webkit-overflow-scrolling: touch;
               padding: 1rem 0.75rem;
               scrollbar-width: none;
-              /* firefox */
 
               &::-webkit-scrollbar {
-                /* webkit */
                 display: none;
               }
 
               .box {
                 min-width: 80%;
-                /* fallback if grid-auto-columns not supported */
                 max-width: 90%;
                 scroll-snap-align: start;
-                /* for scroll snapping */
                 flex: 0 0 auto;
               }
 
-              /* Optional: enable snap for nicer UX */
               scroll-snap-type: x mandatory;
             }
 

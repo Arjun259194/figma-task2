@@ -1,3 +1,5 @@
+@import "../../index.scss";
+
 .blog-section {
   padding: 4rem 0;
   display: flex;
@@ -30,9 +32,18 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
 
+    @include mobile {
+      overflow-x: auto;
+      scrollbar-width: none;
+      padding-inline: 1rem;
+    }
+
     .blog {
       display: flex;
       flex-direction: column;
+      @include mobile {
+        width: 90vw;
+      }
 
       & > :not(img) {
         padding-inline: 1.5rem;

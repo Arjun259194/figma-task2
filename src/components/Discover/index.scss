@@ -1,3 +1,5 @@
+@import "../../index.scss";
+
 $bg: #194556;
 
 .discover-section {
@@ -41,6 +43,11 @@ $bg: #194556;
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @include mobile {
+      flex-direction: column;
+      gap: 1rem;
+    }
 
     .tags {
       .tag {
@@ -93,10 +100,16 @@ $bg: #194556;
 
       &:first-child {
         margin-left: 6rem;
+        @include mobile {
+          margin-left: 2rem;
+        }
       }
 
       &:last-child {
         margin-right: 6rem;
+        @include mobile {
+          margin-right: 2rem;
+        }
       }
 
       .bottom {

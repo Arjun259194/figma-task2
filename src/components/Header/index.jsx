@@ -63,7 +63,7 @@ export default function Header() {
                 Réservation rapide
               </Button>
 
-              <Nav.Link href="tel:+33357777777" className="fw-bold">
+              <Nav.Link href="tel:+33357777777" className="fw-bold no-mobile">
                 <Button variant="light">
                   <PhoneCall className="me-1" size={14} />
                   +33 35 77 77 77
@@ -71,7 +71,7 @@ export default function Header() {
               </Nav.Link>
               <Nav.Link
                 href="#currency"
-                className="d-flex align-items-center text-white"
+                className="d-flex align-items-center text-white no-mobile"
               >
                 <Globe className="me-1" size={14} /> FR - €
               </Nav.Link>

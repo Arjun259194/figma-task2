@@ -6,6 +6,13 @@
   }
 }
 
+
+@include mobile {
+  .no-mobile {
+      display: none !important;
+  }
+}
+
 .navigation {
   @include mobile() {
     display: none;

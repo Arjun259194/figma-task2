@@ -2,21 +2,19 @@
 
 header {
   @include mobile {
-    padding: 1rem 0.5rem 0 0.5rem;
     background-color: var(--rvr-surface);
 
-    .promo-bar {
-      border-radius: 1rem;
-    }
     .logo {
       max-width: calc(100vw / 3);
     }
 
     color: var(--rvr-surface);
+
   }
 
+
   .navbar-brand.riverly-brand {
-    color: #2c5a51 !important;
+    color: var(--rvr-brand) !important;
     font-weight: bold;
     font-size: 1.5rem;
   }
@@ -25,6 +23,20 @@ header {
     font-weight: 500;
     /* color: #333 !important; */
     color: white !important;
+
+    @include mobile {
+      padding: 1rem;
+      border-radius: 0.5rem;
+      color: black !important;
+      font-weight: normal;
+      font-size: 1.2rem;
+      border-bottom: 2px solid var(--rvr-border);
+      margin-bottom: 0.5rem;
+
+      &:hover {
+        background-color: rgb(189, 189, 189);
+      }
+    }
   }
 
   .riverly-btn {
@@ -33,23 +45,32 @@ header {
     font-weight: 600;
     border-radius: 4px;
     padding: 0.5rem 1rem;
+    @include mobile {
+      margin: 0.5rem 0;
+      font-size: 1.5rem;
+    }
   }
 
   .btn-bons-plans {
+    // #2c5a51 does not have a variable, so leave as is
     color: #2c5a51;
-    border: 1px solid #d0f2b9;
-    background-color: #fff1d3 !important;
-    color: #9f2d28 !important;
-    border-color: #fff1d3 !important;
+    border: 1px solid #d0f2b9; // No matching variable for #d0f2b9
+    background-color: #fff1d3 !important; // No matching variable for #fff1d3
+    color: #9f2d28 !important; // No matching variable for #9f2d28
+    border-color: #fff1d3 !important; // No matching variable for #fff1d3
     border-radius: 1rem !important;
     font-size: 1.1rem;
     padding: 0.5rem;
+    @include mobile {
+      margin: 0.5rem 0;
+      font-size: 1.5rem;
+    }
   }
 
   .btn-devis,
   .btn-reservation {
-    background-color: #2c5a51;
-    border-color: #2c5a51;
+    background-color: var(--rvr-brand);
+    border-color: var(--rvr-brand);
     color: white;
   }
 

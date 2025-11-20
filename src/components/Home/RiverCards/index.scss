@@ -1,0 +1,163 @@
+@import "../../../index.scss";
+.river-section {
+  background-color: var(--rvr-brand);
+  padding: 2rem 0;
+  color: white;
+
+  h3 {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 4rem;
+  }
+
+  div {
+    position: relative;
+
+    div.tags {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+
+      @include mobile {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+
+      div.wrapper {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        @include mobile {
+          overflow-x: auto;
+          max-width: 100%;
+          overflow-x: auto;
+          display: flex;
+          flex: 1;
+        }
+      }
+
+      .tag {
+        white-space: nowrap;
+        font-size: 1.2rem;
+        background-color: transparent;
+        border: 1px solid white;
+        padding: 0.5rem 1rem;
+        border-radius: 1.5rem;
+        margin-inline: 0.5rem;
+
+        @include mobile {
+          width: max-content;
+          font-size: 1rem;
+        }
+
+        &[data-active] {
+          background-color: white;
+          color: var(--rvr-brand);
+        }
+      }
+
+      a {
+        margin-left: auto;
+        flex-direction: column;
+        font-size: 1.25rem;
+        color: white !important;
+        text-underline-offset: 0.5rem;
+
+        @include mobile {
+          margin: 1rem 0 0 0;
+        }
+      }
+    }
+
+    button.navigation {
+      position: absolute;
+      border: none;
+      padding: 0.8rem;
+      z-index: 10;
+      border: 2px solid var(--rvr-brand);
+      color: var(--rvr-brand);
+
+      &:first-child {
+        top: 50%;
+        left: 0;
+        border-top-right-radius: 1.25rem;
+        border-bottom-right-radius: 1.25rem;
+        border-left: none;
+      }
+
+      &:last-child {
+        top: 50%;
+        right: 0;
+        border-top-left-radius: 1.25rem;
+        border-bottom-left-radius: 1.25rem;
+        border-right: none;
+      }
+    }
+
+    div.cards {
+      display: flex;
+      overflow-x: auto;
+      scrollbar-width: none;
+      padding: 4rem 0.5rem;
+      padding-left: 10rem;
+      position: relative;
+      z-index: 5;
+
+      @include mobile {
+        padding-left: 1rem;
+      }
+
+      .card {
+        height: 445px;
+        min-width: 350px;
+        margin-inline: 1rem;
+        border: none;
+        border-radius: 1rem;
+        overflow: hidden;
+
+        img {
+          border: none;
+          outline: none;
+          width: 100%;
+          height: 60%;
+          object-position: center;
+          object-fit: cover;
+        }
+
+        div {
+          border-bottom: 2px solid var(--rvr-border);
+          span {
+            font-weight: bold;
+          }
+
+          h4 {
+            margin: 0.5rem 0;
+            font-size: 2rem;
+          }
+
+          p {
+            font-size: 1.3rem;
+          }
+        }
+
+        hr {
+          padding: 0;
+          margin: 0;
+        }
+
+        a {
+          text-align: center;
+          font-size: 1.25rem;
+        }
+
+        div,
+        a {
+          margin: 0.5rem 1rem;
+        }
+      }
+    }
+  }
+}

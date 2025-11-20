@@ -1,16 +1,16 @@
 import "./index.css";
-import Hero from "../../components/Hero/index.jsx";
-import Location from "../../components/Location/index.jsx";
-import Offer from "../../components/Offer/index.jsx";
-import MapGrid from "../../components/MapGrid/index.jsx";
-import RiverCards from "../../components/RiverCards/index.jsx";
-import BindText from "../../components/BindText/index.jsx";
-import StayInFrance from "../../components/StayInFrance/index.jsx";
-import CurrentFavorites from "../../components/CurrentFavorites/index.jsx";
-import Review from "../../components/Review/index.jsx";
-import Discover from "../../components/Discover/index.jsx";
-import Blog from "../../components/Blog/index.jsx";
-import Questions from "../../components/Questions/index.jsx";
+import Hero from "../../components/Home/Hero/index.jsx";
+import Location from "../../components/Home/Location/index.jsx";
+import Offer from "../../components/Home/Offer/index.jsx";
+import MapGrid from "../../components/Home/MapGrid/index.jsx";
+import RiverCards from "../../components/Home/RiverCards/index.jsx";
+import BindText from "../../components/Home/BindText/index.jsx";
+import StayInFrance from "../../components/Home/StayInFrance/index.jsx";
+import CurrentFavorites from "../../components/Home/CurrentFavorites/index.jsx";
+import Review from "../../components/Home/Review/index.jsx";
+import Discover from "../../components/Home/Discover/index.jsx";
+import Blog from "../../components/Home/Blog/index.jsx";
+import Questions from "../../components/Home/Questions/index.jsx";
 
 export default function Home() {
   return (

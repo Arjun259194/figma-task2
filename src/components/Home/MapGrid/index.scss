@@ -1,0 +1,143 @@
+@import "../../../index.scss";
+
+.map-grid {
+  .title {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    a {
+      text-underline-offset: 0.5rem;
+    }
+  }
+
+  .content {
+    .frames {
+      display: grid;
+      margin-top: 1rem;
+      gap: 1rem;
+      align-items: start;
+      grid-template-columns: repeat(5, 1fr);
+      position: relative;
+      /* Optional, for better control */
+      z-index: 2;
+      margin: 2rem 0;
+
+      @include mobile {
+        display: flex;
+        flex-direction: column-reverse;
+      }
+
+      .fade-box {
+        pointer-events: none;
+        inset: 0;
+        right: calc(100% / 5 * 2);
+        background: #2a7b9b;
+        background: linear-gradient(
+          180deg,
+          rgba(42, 123, 155, 0) 0%,
+          rgba(87, 199, 133, 0) 50%,
+          rgba(255, 255, 255, 1) 95%
+        );
+        display: block;
+        position: absolute;
+        z-index: 20;
+
+        @include mobile {
+          display: none;
+        }
+      }
+
+      .left {
+        display: flex;
+        flex-direction: column;
+        grid-column: 1 / span 3;
+        max-height: 80vh;
+        /* Set this to your preferred fixed height */
+        min-height: 100%;
+        overflow-y: auto;
+        /* Enable vertical scrolling */
+        scrollbar-width: none;
+        position: relative;
+
+        .frame {
+          margin-bottom: 2rem;
+
+          span.link {
+            margin: 1rem;
+          }
+
+          &:last-child {
+            margin-bottom: 8rem;
+            @include mobile {
+              margin: unset;
+            }
+          }
+
+          .boxs {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            padding: 1rem;
+
+            @include mobile {
+              // REMOVE the fixed 3-column grid
+              grid-template-columns: unset;
+
+              // horizontal scroll settings
+              grid-auto-flow: column;
+              grid-auto-columns: minmax(80%, 80%);
+              gap: 1rem;
+              overflow-x: auto;
+              -webkit-overflow-scrolling: touch;
+              padding: 1rem 0.75rem;
+              scrollbar-width: none;
+
+              &::-webkit-scrollbar {
+                display: none;
+              }
+
+              .box {
+                min-width: 80%;
+                max-width: 90%;
+                scroll-snap-align: start;
+                flex: 0 0 auto;
+              }
+
+              scroll-snap-type: x mandatory;
+            }
+
+            .box {
+              position: relative;
+
+              img {
+                width: 100%;
+                z-index: 5;
+              }
+
+              span {
+                z-index: 10;
+                position: absolute;
+                bottom: 5%;
+                left: 50%;
+                transform: translateX(-50%);
+                color: white;
+                font-weight: bold;
+              }
+            }
+          }
+        }
+      }
+
+      img.right {
+        grid-column: span 2;
+        width: 100%;
+        height: 100%;
+        /* Fill the parent height */
+        object-fit: cover;
+        /* Ensure aspect ratio is maintained */
+        border-radius: 1rem;
+      }
+    }
+  }
+}
